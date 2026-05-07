@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 380"
+     font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>SHK-D4-P1 — Bore Section A-A (longitudinal)</title>
+  <desc>Section through bore axis; OD 1.10, ID 0.787, length 21.50 in. Scale 1:1.</desc>
+
+  <rect x="0" y="0" width="1100" height="380" fill="#ffffff"/>
+
+  <!-- Section view: 21.50 in length at scale 1:2 (40 px/in for layout fit) -->
+  <g transform="translate(80, 100)">
+    <!-- OD (top half) hatch fill -->
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#666" stroke-width="0.6"/>
+    </pattern>
+
+    <!-- Top wall (cross-section hatch) -->
+    <path d="M 0,0 L 860,0 L 860,15.7 L 0,15.7 Z" fill="url(#hatch)" stroke="#222" stroke-width="1.2"/>
+    <!-- Bottom wall -->
+    <path d="M 0,46.3 L 860,46.3 L 860,62 L 0,62 Z" fill="url(#hatch)" stroke="#222" stroke-width="1.2"/>
+
+    <!-- Bore void rectangle -->
+    <line x1="0" y1="15.7" x2="860" y2="15.7" stroke="#222" stroke-width="1.0"/>
+    <line x1="0" y1="46.3" x2="860" y2="46.3" stroke="#222" stroke-width="1.0"/>
+    <!-- Centerline -->
+    <line x1="-15" y1="31" x2="875" y2="31" stroke="#444" stroke-width="0.6"
+          stroke-dasharray="10 2 2 2"/>
+    <text x="-25" y="34" font-size="10">A</text>
+    <text x="881" y="34" font-size="10">A</text>
+
+    <!-- Foot end face (datum B) -->
+    <line x1="0" y1="-10" x2="0" y2="72" stroke="#222" stroke-width="1.0"/>
+    <text x="-15" y="-15" font-size="10" font-weight="bold">B</text>
+    <text x="-15" y="-3" font-size="10">(foot)</text>
+
+    <!-- Utaguchi end notch -->
+    <polygon points="848,0 860,0 860,9 848,15.7" fill="#fff" stroke="#222" stroke-width="1.0"/>
+    <text x="855" y="-5" font-size="10">utag.</text>
+
+    <!-- Bore ID dimension at three stations -->
+    <g font-size="10" fill="#222">
+      <!-- foot station -->
+      <line x1="60" y1="15.7" x2="60" y2="46.3" stroke="#0a6" stroke-width="0.7"/>
+      <line x1="55" y1="15.7" x2="65" y2="15.7" stroke="#0a6" stroke-width="0.7"/>
+      <line x1="55" y1="46.3" x2="65" y2="46.3" stroke="#0a6" stroke-width="0.7"/>
+      <text x="74" y="34" fill="#0a6">Ø 0.787 ± 0.003 (foot)</text>
+
+      <!-- mid station -->
+      <line x1="430" y1="15.7" x2="430" y2="46.3" stroke="#0a6" stroke-width="0.7"/>
+      <text x="438" y="34" fill="#0a6">Ø 0.787 ± 0.005 (mid, 10.75)</text>
+
+      <!-- top station -->
+      <line x1="800" y1="15.7" x2="800" y2="46.3" stroke="#0a6" stroke-width="0.7"/>
+      <text x="730" y="34" fill="#0a6">Ø 0.787 ± 0.005 (top)</text>
+    </g>
+
+    <!-- OD callout -->
+    <line x1="-50" y1="0" x2="-50" y2="62" stroke="#222" stroke-width="0.8"/>
+    <line x1="-57" y1="0" x2="-43" y2="0" stroke="#222" stroke-width="0.8"/>
+    <line x1="-57" y1="62" x2="-43" y2="62" stroke="#222" stroke-width="0.8"/>
+    <text x="-90" y="34" font-size="13">Ø 1.10</text>
+
+    <!-- Wall thickness callout -->
+    <line x1="430" y1="-20" x2="430" y2="0" stroke="#0a6" stroke-width="0.6"/>
+    <text x="430" y="-25" text-anchor="middle" font-size="11" fill="#0a6">wall ≥ 0.150 in</text>
+
+    <!-- Length dimension -->
+    <line x1="0" y1="100" x2="860" y2="100" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="93" x2="0" y2="107" stroke="#222" stroke-width="0.8"/>
+    <line x1="860" y1="93" x2="860" y2="107" stroke="#222" stroke-width="0.8"/>
+    <text x="430" y="115" text-anchor="middle" font-size="13">21.50 in (overall)</text>
+
+    <!-- Mid-station dim -->
+    <line x1="0" y1="135" x2="430" y2="135" stroke="#222" stroke-width="0.6"/>
+    <line x1="0" y1="130" x2="0" y2="140" stroke="#222" stroke-width="0.6"/>
+    <line x1="430" y1="130" x2="430" y2="140" stroke="#222" stroke-width="0.6"/>
+    <text x="215" y="148" text-anchor="middle" font-size="11">10.75 to mid station</text>
+
+    <!-- Annotations -->
+    <text x="80" y="200" font-size="11">
+      Bore reamed final-pass with 20 mm reamer (SHK-BOM-005), single advance, 600 rpm, cutting oil.
+    </text>
+    <text x="80" y="216" font-size="11">
+      Ovalization check: 3 readings 120° apart per station; reject if &gt; 0.005 in oval.
+    </text>
+    <text x="80" y="232" font-size="11">
+      Wall-thickness audit at hole-4 station (12.95 in from foot) before tone-hole drilling.
+    </text>
+  </g>
+
+  <!-- Title block -->
+  <g transform="translate(700, 280)">
+    <rect x="0" y="0" width="380" height="80" fill="none" stroke="#222" stroke-width="1.0"/>
+    <line x1="0" y1="20" x2="380" y2="20" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="40" x2="380" y2="40" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="60" x2="380" y2="60" stroke="#222" stroke-width="0.8"/>
+    <line x1="190" y1="20" x2="190" y2="80" stroke="#222" stroke-width="0.8"/>
+    <text x="6" y="14" font-size="11" font-weight="bold">Project: Shakuhachi (SHK-D4-P1)</text>
+    <text x="6" y="34" font-size="11">Drawing: Bore Section A-A</text>
+    <text x="6" y="54" font-size="11">Section: longitudinal</text>
+    <text x="196" y="34" font-size="11">Scale: 1:2 (length)</text>
+    <text x="196" y="54" font-size="11">Units: inches</text>
+    <text x="6" y="74" font-size="11">Material: cherry</text>
+    <text x="196" y="74" font-size="11">Date: 2026-05-07  Rev: A</text>
+  </g>
+</svg>

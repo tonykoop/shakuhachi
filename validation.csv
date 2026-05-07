@@ -1,0 +1,17 @@
+build_id,instrument_id,stage,measurement,target_value,unit,tolerance,measured_value,environment,result,action
+,SHK-D4-P1,scrap-validation,bore wander at 6 in,< 0.020,in offset from spindle axis,"Stop and reset jig if exceeded",,Pine scrap blank; same fixture as production,,"Repeat scrap test before drilling production cherry. See instrument-maker#84 fallback plan."
+,SHK-D4-P1,scrap-validation,bore wander at 12 in,< 0.040,in offset from spindle axis,"Stop and reset jig if exceeded",,Pine scrap blank,,"Linear wander acceptable; sudden step indicates chip pack — retract more often."
+,SHK-D4-P1,scrap-validation,bore wander at 18 in,< 0.080,in offset from spindle axis,"Stop and abort if exceeded",,Pine scrap blank,,"Above 0.080 in offset, switch to staged drilling from both ends."
+,SHK-D4-P1,post-bore,bore ID at foot,0.787,in,"+/- 0.003 in",,Bore gauge or pin gauge; 3 readings 120 deg apart,,Reject if ovalization > 0.005 in.
+,SHK-D4-P1,post-bore,bore ID at mid (10.75 in from foot),0.787,in,"+/- 0.005 in",,Bore gauge,,Mid-bore typically widest; reaming pass evens out.
+,SHK-D4-P1,post-bore,bore ID at top (utaguchi),0.787,in,"+/- 0.005 in",,Bore gauge,,Top-of-bore matters acoustically — utaguchi is cut into this end.
+,SHK-D4-P1,post-turn,wall thickness at hole 4 station (12.95 in from foot),>= 0.150,in,"Minimum; abort if any quadrant < 0.140",,Calipers + bore reference,,Verify before drilling tone holes.
+,SHK-D4-P1,post-turn,OD at five stations,1.10,in,"+/- 0.010 in",,Calipers,,"Stations: foot, 5.5, 10.75, 16.0, 21.5 in."
+,SHK-D4-P1,post-utaguchi,Ro fundamental (no holes covered? all holes covered),293.665,Hz,"+/- 25 cents pre-tuning, +/- 10 cents post-tuning",,"Korg OT-120; player TK; 68F, 45% RH; mic 6 in",,"File utaguchi or trim foot to bring fundamental within range."
+,SHK-D4-P1,per-hole,Tsu (F4) hole 1 sounded freq,349.228,Hz,"+/- 10 cents post-tuning",,"Tuner; player TK; environment per stage 3",,File hole open in 0.5 mm increments. Never enlarge with drill.
+,SHK-D4-P1,per-hole,Re (G4) hole 2 sounded freq,391.995,Hz,"+/- 10 cents post-tuning",,Tuner; player TK,,
+,SHK-D4-P1,per-hole,Chi (A4) hole 3 sounded freq,440.000,Hz,"+/- 10 cents post-tuning",,Tuner; player TK,,Hole 3 typically needs the most filing.
+,SHK-D4-P1,per-hole,Ri (C5) hole 4 sounded freq,523.251,Hz,"+/- 10 cents post-tuning",,Tuner; player TK,,
+,SHK-D4-P1,per-hole,Thumb (D5) sounded freq,587.330,Hz,"+/- 10 cents post-tuning",,Tuner; player TK,,Drilled on back; verify clean overblow before file-open.
+,SHK-D4-P1,octave,Ro' (D5 by overblowing Ro fingering),587.330,Hz,"+/- 25 cents",,Tuner; player TK,,"Octave error > 25 cents = bore taper / utaguchi geometry issue. Reshape, do not tone-hole-tune."
+,SHK-D4-P1,30-day-stability,Ro fundamental drift over 30 days,< 5,cents drift,Daily measurements at constant 68F,,Tuner; player TK; same time of day,,"Check pitch stability after oil cure + carnauba wax. If > 5 cents drift, reapply oil and re-cure."

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Shakuhachi (SHK-D4-P1) — build log · Tony Koop</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #faf7f0;
+    --accent: #a64f24;
+    --muted: #6a6a6a;
+    --rule: #d8d2c2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    margin: 0;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 28px 48px;
+    background: #fff;
+  }
+  .wordmark {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 48px; }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 0 0 8px 0;
+  }
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 48px 0 12px 0;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px;
+  }
+  h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 18px; margin: 24px 0 6px 0; }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    margin-right: 6px;
+    font-size: 12px;
+    background: #fff;
+  }
+  .hero {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ddd;
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-style: italic;
+    margin: 24px 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    margin: 12px 0 24px 0;
+  }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--rule); }
+  th { background: #fff; font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  pre, code {
+    font-family: 'JetBrains Mono', Menlo, Consolas, monospace;
+    background: #fff;
+    border: 1px solid var(--rule);
+    padding: 0 4px;
+    border-radius: 3px;
+    font-size: 13.5px;
+  }
+  pre { padding: 12px 14px; overflow-x: auto; }
+  a { color: var(--accent); }
+  .step {
+    margin: 16px 0;
+    padding: 12px 16px;
+    background: #fff;
+    border-left: 3px solid var(--accent);
+  }
+  .step h3 { margin: 0 0 4px 0; }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 24px 48px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .drawings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .drawings figure {
+    background: #fff;
+    border: 1px solid var(--rule);
+    margin: 0;
+    padding: 12px;
+  }
+  .drawings img, .drawings object { width: 100%; height: auto; display: block; }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  ul.ck { list-style: none; padding-left: 0; }
+  ul.ck li::before { content: "□  "; color: var(--accent); font-weight: bold; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="wordmark" href="https://github.com/tonykoop">Heifer Zephyr</a>
+</header>
+
+<main>
+  <h1>Shakuhachi — SHK-D4-P1</h1>
+  <p class="meta">
+    1.8-shaku D4 solid-billet hardwood prototype · open-pipe acoustics · headstock-driven deep-bore drilling
+    <br/>
+    <span class="pill">family · open-pipe</span>
+    <span class="pill">pipeline · cnc-lathe</span>
+    <span class="pill">status · scaffold → packet</span>
+    <span class="pill">date · 2026-05-07</span>
+  </p>
+
+  <div class="hero">[hero photo: SHK-D4-P1-08-hero.jpg — see photo-shotlist.md]</div>
+
+  <h2>What this is</h2>
+  <p>
+    A small, manufacturable family of solid-billet hardwood shakuhachi — built on a Western luthier's lathe + drill press,
+    not from split madake bamboo. The first prototype is <strong>SHK-D4-P1</strong>: 1.8-shaku D4 in cherry, with the long bore
+    drilled using the <a href="https://github.com/tonykoop/instrument-maker/issues/84">headstock-driven deep-bore drilling</a>
+    technique on square stock before the outside is turned round.
+  </p>
+  <p>
+    This page is the public build log. The raw packet (design.md, BOM, cut list, validation, assembly manual) lives in
+    the <a href="https://github.com/tonykoop/shakuhachi">repo root</a>; the parametric design table is
+    <a href="../shakuhachi-design-table.xlsx">shakuhachi-design-table.xlsx</a>.
+  </p>
+
+  <h2>Cultural framing</h2>
+  <p>
+    The shakuhachi (尺八) descends from Tang-Chinese xiao ancestors imported to Japan in the 7th–8th c., and was central to
+    the practice of <em>suizen</em> (&ldquo;blowing meditation&rdquo;) within the Fuke sect of Zen Buddhism (Edo-period komusō,
+    or &ldquo;emptiness monks&rdquo;). The Meiji government banned the Fuke sect in 1871; the instrument survived in
+    concert use, and modern Kinko-ryū and Tozan-ryū schools continue the tradition. Traditional makers in Kyoto, Tokyo,
+    and Hamamatsu still use madake bamboo with urushi-lined bores.
+  </p>
+  <p>
+    The instruments built from this packet are <strong>Western luthier-shop adaptations</strong> that respectfully model the
+    shakuhachi's acoustics and finger-hole logic without claiming to replicate the traditional craft. Where this packet
+    diverges from tradition (solid billet, hardwood, straight bore, oil finish, no urushi), it is documented as such.
+  </p>
+
+  <h2>Governing model</h2>
+  <p>
+    Open-open pipe with two open ends — foot and utaguchi:
+  </p>
+<pre>f = c / (2 · L_eff)
+L_eff = L_physical + δ_foot + δ_utaguchi
+δ_foot ≈ 0.6 · r_bore                    (standard open-end correction)
+δ_utaguchi ≈ 1.5 · r_bore – 2.0 · r_bore  (empirical; shakuhachi-specific)
+hole_distance_from_foot ≈ L_acoustic · (f_fund / f_hole)</pre>
+  <p>
+    The standard 0.6·r foot correction is well-validated. The utaguchi end is harder: a beveled notch with player jet
+    excitation extends the acoustic open-point past the physical rim. Back-fitting from the canonical 1.8-shaku ↔ D4
+    anchor gives a per-end correction of ~1.7·r, which the empirical loop refines after the first measurement.
+  </p>
+  <p>
+    <strong>Empirical-correction guard:</strong> Tony's NAF K2 corrections do <em>not</em> apply here. They were derived
+    from fipple-block + slow-air-chamber NAFs; the shakuhachi has neither. K2 columns in the workbook are intentionally
+    blank for shakuhachi rows.
+  </p>
+
+  <h2>First prototype: SHK-D4-P1</h2>
+  <table>
+    <thead>
+      <tr><th>Parameter</th><th class="num">Value</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Fundamental</td><td class="num">293.665 Hz (D4)</td><td>1.8-shaku canonical</td></tr>
+      <tr><td>Physical length</td><td class="num">21.50 in</td><td>54.61 cm = 1.80 shaku</td></tr>
+      <tr><td>Bore ID</td><td class="num">0.787 in</td><td>20 mm; H7 reamed</td></tr>
+      <tr><td>OD</td><td class="num">1.10 in</td><td>Wall ≥ 0.150 in everywhere</td></tr>
+      <tr><td>Material</td><td>cherry (qtr-sawn)</td><td>backup: hard maple, walnut</td></tr>
+      <tr><td>Utaguchi</td><td>0.787 W × 0.315 D × 32°</td><td>opt. inlay 0.060 D buffalo horn / lignum vitae</td></tr>
+      <tr><td>Holes</td><td>5 (4 front + thumb)</td><td>Kinko-ryū intervals: +0/+3/+5/+7/+10/+12 semi</td></tr>
+      <tr><td>Hole start Ø</td><td class="num">0.276 in</td><td>7 mm; file-open during tuning</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Hole stations (acoustic first-pass)</h3>
+  <table>
+    <thead>
+      <tr><th>Hole</th><th>Note (Kinko-ryū)</th><th class="num">Δ semi</th><th class="num">f_hole</th><th class="num">d_foot (in)</th><th>Face</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Hole 1</td><td>Tsu (F4)</td><td class="num">+3</td><td class="num">349.228 Hz</td><td class="num">19.40</td><td>front</td></tr>
+      <tr><td>Hole 2</td><td>Re (G4)</td><td class="num">+5</td><td class="num">391.995 Hz</td><td class="num">17.29</td><td>front</td></tr>
+      <tr><td>Hole 3</td><td>Chi (A4)</td><td class="num">+7</td><td class="num">440.000 Hz</td><td class="num">15.40</td><td>front</td></tr>
+      <tr><td>Hole 4</td><td>Ri (C5)</td><td class="num">+10</td><td class="num">523.251 Hz</td><td class="num">12.95</td><td>front</td></tr>
+      <tr><td>Thumb</td><td>Ro′ (D5)</td><td class="num">+12</td><td class="num">587.330 Hz</td><td class="num">11.54</td><td>back</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Drawings</h2>
+  <div class="drawings">
+    <figure><object data="../drawings/SHK-D4-P1-overall.svg" type="image/svg+xml"></object><figcaption>Overall side elevation (1:2)</figcaption></figure>
+    <figure><object data="../drawings/SHK-D4-P1-bore-section.svg" type="image/svg+xml"></object><figcaption>Bore section A-A</figcaption></figure>
+    <figure><object data="../drawings/SHK-D4-P1-utaguchi.svg" type="image/svg+xml"></object><figcaption>Utaguchi detail (4:1)</figcaption></figure>
+    <figure><object data="../drawings/SHK-D4-P1-hole-layout.svg" type="image/svg+xml"></object><figcaption>Tone-hole template (1:1, paper wrap)</figcaption></figure>
+    <figure><object data="../drawings/SHK-fixture-vise.svg" type="image/svg+xml"></object><figcaption>Tailstock vise (deep-bore fixture)</figcaption></figure>
+    <figure><object data="../drawings/SHK-fixture-hole-jig.svg" type="image/svg+xml"></object><figcaption>Tone-hole drill jig</figcaption></figure>
+  </div>
+
+  <h2>Build workflow</h2>
+
+  <div class="step"><h3>1. Mill blanks</h3>
+    Three quarter-sawn cherry pieces, 1×1×24 in, kiln-dried &lt; 8% MC. Inspect for runout, knots, internal checks.</div>
+
+  <div class="step"><h3>2. Build the tailstock vise (one-time)</h3>
+    Welded steel-angle V-channel + two 3/8-16 side clamps, MT2 shank. Indicate centerline runout to spindle axis &lt; 0.005 in.</div>
+
+  <div class="step"><h3>3. Scrap-stock validation pass</h3>
+    Pine scrap, same fixture, full-depth pilot bore. Measure offsets at 6, 12, 18 in. Reject if &gt; 0.020 / 0.040 / 0.080 in respectively.</div>
+
+  <div class="step"><h3>4. Production deep-bore (the long one)</h3>
+    3/8 in pilot → 1/2 in → 5/8 in → 3/4 in → 0.787 in reamer. Pecks ≤ 1.5 in. Reamer pass single-advance with cutting oil at 600 rpm.
+    See <a href="../assembly-manual.md">assembly-manual.md § Step 5</a>.</div>
+
+  <div class="step"><h3>5. Outside turn</h3>
+    Mount between centers off the bore (pin-centers). Roughing gouge to 1.20 in OD, finish to 1.10 in OD. Sand 220 → 320 → 400.</div>
+
+  <div class="step"><h3>6. Tone-hole layout + undersized drilling</h3>
+    Print the hole-layout template at 1:1, wrap, awl-punch centers, drill 7 mm brad-point on the V-cradle jig. Holes start undersize.</div>
+
+  <div class="step"><h3>7. Utaguchi cut</h3>
+    Bandsaw rough notch → chisel pare to 32° inner bevel → mill-bastard file flat → 0.020 in round-over. Cut shallow first.</div>
+
+  <div class="step"><h3>8. Bisque-style tuning</h3>
+    Tape all holes; blow Ro fundamental; record cents error. Deepen utaguchi or trim foot in small increments. Then tune
+    each hole open in 0.5 mm steps with diamond round file. Re-measure after every step.</div>
+
+  <div class="step"><h3>9. Octave check</h3>
+    Overblow Ro to Ro′. Octave error &gt; 25 cents = bore-axis or utaguchi geometry problem; do not tone-hole-tune around it.</div>
+
+  <div class="step"><h3>10. Finish + record</h3>
+    Walnut oil flooded inside + outside; cure 3–5 days; carnauba wax outside only. Final tuner pass; row in validation.csv;
+    run <code>record_measurement.py</code> to update the per-family corrections database.</div>
+
+  <h2>Validation criteria</h2>
+  <ul class="ck">
+    <li>Bore wander &lt; 0.020 / 0.040 / 0.080 in at 6 / 12 / 18 in (pine scrap pass)</li>
+    <li>Bore ovalization &lt; 0.005 in at any station</li>
+    <li>Wall thickness ≥ 0.150 in at every quadrant</li>
+    <li>Ro fundamental within ±25 cents pre-tuning, ±10 cents post-tuning</li>
+    <li>All five holes within ±10 cents of target after filing</li>
+    <li>Octave (Ro → Ro′) within ±25 cents</li>
+    <li>30-day pitch drift &lt; 5 cents at constant 68 °F</li>
+  </ul>
+
+  <h2>Open assumptions</h2>
+  <ol>
+    <li>δ_utaguchi ~1.7·r is empirical; first measurement re-fits it.</li>
+    <li>Bore is straight cylindrical. Traditional madake bore tapers; documented divergence.</li>
+    <li>Hole diameters uniform 0.276 in starting size. Real shakuhachi often 8–10 mm — start small, file open.</li>
+    <li>Wood-species sensitivity unmeasured. Cherry first; backup species spec'd.</li>
+    <li>No urushi lining. Western prototype uses oil finish.</li>
+    <li>Player calibration absorbed into utaguchi correction. Test player = TK; cross-player corrections deferred.</li>
+  </ol>
+
+  <h2>Family roll-out (after SHK-D4-P1 validates)</h2>
+  <p>
+    The 11-key family in the design table (C4 through B4 + higher) reads forward from the corrected δ_utaguchi value.
+    Re-cut sibling blanks only after the empirical loop tightens predictions to ±15 cents.
+  </p>
+
+  <h2>Cross-references</h2>
+  <ul>
+    <li><a href="https://github.com/tonykoop/instrument-maker/issues/84">instrument-maker#84</a> — headstock-driven deep-bore drilling</li>
+    <li><a href="https://github.com/tonykoop/flutes">tonykoop/flutes</a> — NAF family (K2 reference; do <em>not</em> port to shakuhachi)</li>
+    <li><a href="https://github.com/tonykoop/fujara">tonykoop/fujara</a> — long open-pipe stave-built sister</li>
+    <li><a href="https://github.com/tonykoop/transverse-flute">tonykoop/transverse-flute</a> — slip-cast open-pipe sister; packet template</li>
+  </ul>
+</main>
+
+<footer>
+  Shakuhachi (SHK-D4-P1) build log · CC BY 4.0 · Tony Koop ·
+  Generated by <code>instrument-maker-v4</code> · 2026-05-07.
+</footer>
+
+</body>
+</html>

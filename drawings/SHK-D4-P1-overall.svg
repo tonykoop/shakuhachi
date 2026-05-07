@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420"
+     font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>SHK-D4-P1 — Overall Side Elevation</title>
+  <desc>Solid cherry shakuhachi prototype, 1.8-shaku D4. Side elevation, scale 1:2.
+  Foot end at left (datum B); utaguchi end at right.</desc>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1100" height="420" fill="#ffffff"/>
+
+  <!-- Body outline (1.10 in OD x 21.50 in length, scale 1:2 inches->24px/in) -->
+  <!-- length = 21.5*40 = 860 px wide; OD = 1.10*40 = 44 px tall -->
+  <g transform="translate(80, 130)">
+    <!-- Outside body -->
+    <rect x="0" y="0" width="860" height="80" fill="#f6efe1" stroke="#222" stroke-width="1.5"/>
+    <!-- Bore (phantom line) -->
+    <rect x="0" y="22" width="860" height="36" fill="none" stroke="#888"
+          stroke-width="0.8" stroke-dasharray="5 3"/>
+    <!-- Centerline -->
+    <line x1="-15" y1="40" x2="875" y2="40" stroke="#444" stroke-width="0.6"
+          stroke-dasharray="10 2 2 2"/>
+
+    <!-- Utaguchi notch (right end) -->
+    <polygon points="848,0 860,0 860,30 848,8" fill="#fff" stroke="#222" stroke-width="1.5"/>
+    <!-- Notch inner-bevel hint -->
+    <line x1="848" y1="8" x2="860" y2="0" stroke="#222" stroke-width="1.2"/>
+
+    <!-- Tone-hole circles (front face, projected) -->
+    <!-- Hole 1 Tsu at 19.40 in from foot -->
+    <circle cx="776" cy="20" r="5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <text x="776" y="12" text-anchor="middle">1 (Tsu)</text>
+    <!-- Hole 2 Re at 17.29 -->
+    <circle cx="691.6" cy="20" r="5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <text x="691.6" y="12" text-anchor="middle">2 (Re)</text>
+    <!-- Hole 3 Chi at 15.40 -->
+    <circle cx="616" cy="20" r="5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <text x="616" y="12" text-anchor="middle">3 (Chi)</text>
+    <!-- Hole 4 Ri at 12.95 -->
+    <circle cx="518" cy="20" r="5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <text x="518" y="12" text-anchor="middle">4 (Ri)</text>
+    <!-- Thumb (back face, dashed) at 11.54 -->
+    <circle cx="461.6" cy="60" r="5" fill="none" stroke="#222" stroke-width="1.0"
+            stroke-dasharray="2 2"/>
+    <text x="461.6" y="78" text-anchor="middle">Thumb (Ro′, back)</text>
+
+    <!-- Datum B label (foot end) -->
+    <line x1="0" y1="80" x2="0" y2="100" stroke="#222" stroke-width="1.0"/>
+    <text x="0" y="115" text-anchor="middle" font-weight="bold">B</text>
+    <text x="0" y="-10" text-anchor="middle" font-size="10">Foot</text>
+
+    <!-- Utaguchi label -->
+    <text x="860" y="-10" text-anchor="middle" font-size="10">Utaguchi</text>
+
+    <!-- Overall length dimension -->
+    <line x1="0" y1="155" x2="860" y2="155" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="148" x2="0" y2="162" stroke="#222" stroke-width="0.8"/>
+    <line x1="860" y1="148" x2="860" y2="162" stroke="#222" stroke-width="0.8"/>
+    <text x="430" y="170" text-anchor="middle" font-size="13">21.50 in</text>
+
+    <!-- OD dimension -->
+    <line x1="-30" y1="0" x2="-30" y2="80" stroke="#222" stroke-width="0.8"/>
+    <line x1="-37" y1="0" x2="-23" y2="0" stroke="#222" stroke-width="0.8"/>
+    <line x1="-37" y1="80" x2="-23" y2="80" stroke="#222" stroke-width="0.8"/>
+    <text x="-50" y="44" text-anchor="middle" font-size="13">Ø 1.10</text>
+
+    <!-- Bore ID dimension callout -->
+    <line x1="430" y1="40" x2="430" y2="-30" stroke="#222" stroke-width="0.6"/>
+    <text x="430" y="-40" text-anchor="middle" font-size="11">Ø 0.787 (bore, A)</text>
+
+    <!-- Hole position dimension chain (from datum B) -->
+    <g transform="translate(0, 200)">
+      <text x="0" y="-5" font-size="11" font-weight="bold">Tone-hole stations (in from foot)</text>
+      <line x1="0" y1="0" x2="860" y2="0" stroke="#222" stroke-width="0.6"/>
+      <!-- ticks -->
+      <line x1="461.6" y1="-4" x2="461.6" y2="4" stroke="#222" stroke-width="0.8"/>
+      <line x1="518" y1="-4" x2="518" y2="4" stroke="#222" stroke-width="0.8"/>
+      <line x1="616" y1="-4" x2="616" y2="4" stroke="#222" stroke-width="0.8"/>
+      <line x1="691.6" y1="-4" x2="691.6" y2="4" stroke="#222" stroke-width="0.8"/>
+      <line x1="776" y1="-4" x2="776" y2="4" stroke="#222" stroke-width="0.8"/>
+      <text x="461.6" y="20" text-anchor="middle" font-size="10">11.54 (thumb)</text>
+      <text x="518" y="35" text-anchor="middle" font-size="10">12.95 (Ri)</text>
+      <text x="616" y="20" text-anchor="middle" font-size="10">15.40 (Chi)</text>
+      <text x="691.6" y="35" text-anchor="middle" font-size="10">17.29 (Re)</text>
+      <text x="776" y="20" text-anchor="middle" font-size="10">19.40 (Tsu)</text>
+    </g>
+  </g>
+
+  <!-- Title block -->
+  <g transform="translate(700, 320)">
+    <rect x="0" y="0" width="380" height="92" fill="none" stroke="#222" stroke-width="1.0"/>
+    <line x1="0" y1="22" x2="380" y2="22" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="44" x2="380" y2="44" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="66" x2="380" y2="66" stroke="#222" stroke-width="0.8"/>
+    <line x1="190" y1="22" x2="190" y2="92" stroke="#222" stroke-width="0.8"/>
+    <text x="6" y="16" font-size="11" font-weight="bold">Project: Shakuhachi (SHK-D4-P1)</text>
+    <text x="6" y="38" font-size="11">Drawing: Overall Side Elevation</text>
+    <text x="6" y="60" font-size="11">Drawn: Tony Koop</text>
+    <text x="196" y="38" font-size="11">Scale: 1:2</text>
+    <text x="196" y="60" font-size="11">Units: inches</text>
+    <text x="6" y="82" font-size="11">Material: cherry, quarter-sawn</text>
+    <text x="196" y="82" font-size="11">Date: 2026-05-07  Rev: A</text>
+  </g>
+
+  <!-- Notes -->
+  <text x="80" y="395" font-size="10" fill="#444">
+    Notes: Bore (datum A) drilled headstock-driven; outside turned between centers off bore. Tone-hole positions are first-pass acoustic stations (open-pipe model). Final positions / diameters set by bisque-style tuning.
+  </text>
+</svg>

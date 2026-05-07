@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480"
+     font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>SHK-fixture-hole-jig — Tone-hole drill-press jig</title>
+  <desc>V-cradle with sliding stop for indexing tone-hole positions on the cylindrical body. Scale 1:2.</desc>
+
+  <rect x="0" y="0" width="1100" height="480" fill="#ffffff"/>
+
+  <!-- Top view of jig: 24 in long (rounded down to 22 for jig) at scale 1:2 -->
+  <g transform="translate(80, 80)">
+    <text x="0" y="-20" font-size="13" font-weight="bold">TOP VIEW</text>
+
+    <!-- Plywood base 22 in long (= 880 px @ 40 px/in too wide, scale 0.5x for fit -> 440px) -->
+    <rect x="0" y="0" width="440" height="80" fill="#ffe9b3" stroke="#222" stroke-width="1.5"/>
+
+    <!-- V-cradle channel (centerline) -->
+    <line x1="0" y1="40" x2="440" y2="40" stroke="#888" stroke-width="0.8" stroke-dasharray="6 3"/>
+
+    <!-- Drill-press hole position (fixed, above cradle) -->
+    <circle cx="220" cy="40" r="8" fill="none" stroke="#a00" stroke-width="1.2"/>
+    <line x1="220" y1="20" x2="220" y2="60" stroke="#a00" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <line x1="200" y1="40" x2="240" y2="40" stroke="#a00" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <text x="220" y="14" text-anchor="middle" font-size="10" fill="#a00">drill axis (fixed)</text>
+
+    <!-- Body phantom on cradle -->
+    <rect x="20" y="22" width="400" height="36" fill="none" stroke="#0a6"
+          stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="220" y="80" text-anchor="middle" font-size="10" fill="#0a6">body phantom (Ø 1.10, 21.5 in)</text>
+
+    <!-- Sliding stop -->
+    <rect x="380" y="-10" width="20" height="100" fill="#bbb" stroke="#222" stroke-width="1.0"/>
+    <text x="390" y="-15" text-anchor="middle" font-size="10">sliding stop</text>
+
+    <!-- Foot reference (left edge of jig) -->
+    <line x1="0" y1="-15" x2="0" y2="100" stroke="#222" stroke-width="1.2"/>
+    <text x="0" y="-25" text-anchor="middle" font-size="11" font-weight="bold">FOOT (0)</text>
+
+    <!-- Length scale -->
+    <line x1="0" y1="115" x2="440" y2="115" stroke="#222" stroke-width="0.6"/>
+    <g font-size="9">
+      <line x1="0"   y1="113" x2="0"   y2="120" stroke="#222"/>
+      <line x1="100" y1="113" x2="100" y2="120" stroke="#222"/>
+      <line x1="200" y1="113" x2="200" y2="120" stroke="#222"/>
+      <line x1="300" y1="113" x2="300" y2="120" stroke="#222"/>
+      <line x1="400" y1="113" x2="400" y2="120" stroke="#222"/>
+      <line x1="440" y1="113" x2="440" y2="120" stroke="#222"/>
+      <text x="0"   y="130" text-anchor="middle">0</text>
+      <text x="100" y="130" text-anchor="middle">5</text>
+      <text x="200" y="130" text-anchor="middle">10</text>
+      <text x="300" y="130" text-anchor="middle">15</text>
+      <text x="400" y="130" text-anchor="middle">20</text>
+      <text x="440" y="130" text-anchor="middle">22 (in)</text>
+    </g>
+  </g>
+
+  <!-- Cross-section through V-cradle -->
+  <g transform="translate(80, 250)">
+    <text x="0" y="-20" font-size="13" font-weight="bold">END SECTION (V-cradle)</text>
+
+    <!-- Plywood base 6 in wide x 1 in thick @ 40 px/in -->
+    <rect x="0" y="40" width="240" height="40" fill="#ffe9b3" stroke="#222" stroke-width="1.5"/>
+
+    <!-- V-cradle cut: 90 deg, depth ~0.55 in (= 22 px) -->
+    <polygon points="80,40 120,62 160,40" fill="#ffd380" stroke="#222" stroke-width="1.0"/>
+
+    <!-- Body cylinder Ø 1.10 in (44 px diameter) seated in V -->
+    <circle cx="120" cy="40" r="22" fill="#f6efe1" stroke="#222" stroke-width="1.2"/>
+    <line x1="120" y1="18" x2="120" y2="62" stroke="#444" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <line x1="98" y1="40" x2="142" y2="40" stroke="#444" stroke-width="0.5" stroke-dasharray="2 2"/>
+
+    <!-- Drill bit (fixed above) -->
+    <line x1="120" y1="-10" x2="120" y2="18" stroke="#a00" stroke-width="2.5"/>
+    <text x="120" y="-20" text-anchor="middle" font-size="10" fill="#a00">drill ↓</text>
+
+    <!-- Index pin on back face -->
+    <line x1="120" y1="62" x2="120" y2="80" stroke="#0a6" stroke-width="1.8"/>
+    <text x="135" y="76" font-size="10" fill="#0a6">index pin (back-face datum)</text>
+
+    <!-- Width dimension -->
+    <line x1="0" y1="100" x2="240" y2="100" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="93" x2="0" y2="107" stroke="#222" stroke-width="0.8"/>
+    <line x1="240" y1="93" x2="240" y2="107" stroke="#222" stroke-width="0.8"/>
+    <text x="120" y="115" text-anchor="middle" font-size="11">6.00 in</text>
+  </g>
+
+  <!-- Notes -->
+  <g transform="translate(80, 380)" font-size="11" fill="#222">
+    <text y="0" font-weight="bold">Notes:</text>
+    <text y="18">1. Build from 3/4 in plywood scrap. V-cradle radius matches body OD (Ø 1.10); cut on bandsaw or CNC router.</text>
+    <text y="36">2. Index pin clocks the body 180° between front-hole and back (thumb) hole drilling. Pin engages a single back-face index slot.</text>
+    <text y="54">3. Sliding stop graduated in 0.05 in increments from 0 (foot reference) to 21.50 (utaguchi end).</text>
+    <text y="72">4. Drill press only — never under power feed. Tone holes are 7 mm (0.276 in) brad-point, drilled undersized.</text>
+  </g>
+
+  <!-- Title block -->
+  <g transform="translate(700, 360)">
+    <rect x="0" y="0" width="380" height="92" fill="none" stroke="#222" stroke-width="1.0"/>
+    <line x1="0" y1="22" x2="380" y2="22" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="44" x2="380" y2="44" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="66" x2="380" y2="66" stroke="#222" stroke-width="0.8"/>
+    <line x1="190" y1="22" x2="190" y2="92" stroke="#222" stroke-width="0.8"/>
+    <text x="6" y="16" font-size="11" font-weight="bold">Project: Shakuhachi (SHK-D4-P1)</text>
+    <text x="6" y="38" font-size="11">Drawing: Tone-hole drill jig</text>
+    <text x="6" y="60" font-size="11">Use: drill-press fixture</text>
+    <text x="196" y="38" font-size="11">Scale: 1:2 (length); 1:1 (section)</text>
+    <text x="196" y="60" font-size="11">Units: inches</text>
+    <text x="6" y="82" font-size="11">Material: 3/4 in plywood</text>
+    <text x="196" y="82" font-size="11">Date: 2026-05-07  Rev: A</text>
+  </g>
+</svg>

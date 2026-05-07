@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"
+     font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>SHK-D4-P1 — Utaguchi Detail</title>
+  <desc>Section through utaguchi notch. Notch width 0.787 in, depth 0.315 in, inner-bevel 32°. Scale 4:1.</desc>
+
+  <rect x="0" y="0" width="800" height="600" fill="#ffffff"/>
+
+  <!-- Section view at scale 4:1 (160 px per inch) -->
+  <g transform="translate(120, 120)">
+    <!-- Body cylinder section (5 in width shown for context, enough to land OD) -->
+    <!-- OD = 1.10 * 160 = 176 px tall; horizontal extent = ~3 in showing detail -->
+
+    <!-- Outer wall outline (top of cylinder) -->
+    <path d="M 0,176 L 0,0 L 480,0 L 480,176 Z"
+          fill="#f6efe1" stroke="#222" stroke-width="1.5"/>
+
+    <!-- Bore (centered vertically; bore = 0.787 in = 126 px tall) -->
+    <!-- Bore center at y=88, so bore goes y=25 to y=151 -->
+    <line x1="0" y1="25" x2="480" y2="25" stroke="#888" stroke-width="0.8" stroke-dasharray="4 2"/>
+    <line x1="0" y1="151" x2="480" y2="151" stroke="#888" stroke-width="0.8" stroke-dasharray="4 2"/>
+
+    <!-- Centerline -->
+    <line x1="-15" y1="88" x2="495" y2="88" stroke="#444" stroke-width="0.6"
+          stroke-dasharray="10 2 2 2"/>
+
+    <!-- Utaguchi notch on right end (top edge), depth 0.315 in = 50.4 px -->
+    <!-- Notch wedge shape: outer rim cuts down to inner bevel at 32 deg from bore axis -->
+    <!-- Outer surface at y=0; cut depth from outer = 50.4 px; inner bevel goes from cut bottom to bore top -->
+    <!-- Replace outer wall on right ~120 px with the wedge -->
+    <path d="M 360,0 L 480,0 L 480,25 L 360,50.4 Z" fill="#fff" stroke="#222" stroke-width="1.5"/>
+    <!-- Round-over hint at outer-edge -->
+    <circle cx="360" cy="0" r="3" fill="none" stroke="#0a6" stroke-width="1.0"/>
+    <text x="346" y="-10" font-size="10" fill="#0a6">R 0.020-0.030 round-over</text>
+
+    <!-- Optional inlay block (phantom outline) -->
+    <rect x="378" y="0" width="80" height="9.6" fill="none" stroke="#222"
+          stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="418" y="-5" font-size="10" text-anchor="middle">inlay 0.060 D × 0.500 L (opt.)</text>
+
+    <!-- Notch width dimension -->
+    <line x1="360" y1="195" x2="480" y2="195" stroke="#222" stroke-width="0.8"/>
+    <line x1="360" y1="188" x2="360" y2="202" stroke="#222" stroke-width="0.8"/>
+    <line x1="480" y1="188" x2="480" y2="202" stroke="#222" stroke-width="0.8"/>
+    <text x="420" y="215" text-anchor="middle" font-size="14">0.787 (notch width)</text>
+
+    <!-- Notch depth dimension -->
+    <line x1="510" y1="0" x2="510" y2="50.4" stroke="#222" stroke-width="0.8"/>
+    <line x1="503" y1="0" x2="517" y2="0" stroke="#222" stroke-width="0.8"/>
+    <line x1="503" y1="50.4" x2="517" y2="50.4" stroke="#222" stroke-width="0.8"/>
+    <text x="525" y="30" font-size="14">0.315 in (depth)</text>
+
+    <!-- Inner-bevel angle annotation -->
+    <path d="M 360,50.4 L 405,50.4 A 30 30 0 0 1 392,30" fill="none" stroke="#0a6" stroke-width="1.0"/>
+    <text x="412" y="48" font-size="13" fill="#0a6">32°</text>
+    <text x="370" y="62" font-size="10" fill="#0a6">(inner bevel from bore axis)</text>
+
+    <!-- Bore ID label -->
+    <text x="180" y="92" font-size="11" fill="#222">bore ID Ø 0.787</text>
+
+    <!-- OD label -->
+    <line x1="-30" y1="0" x2="-30" y2="176" stroke="#222" stroke-width="0.8"/>
+    <line x1="-37" y1="0" x2="-23" y2="0" stroke="#222" stroke-width="0.8"/>
+    <line x1="-37" y1="176" x2="-23" y2="176" stroke="#222" stroke-width="0.8"/>
+    <text x="-85" y="92" font-size="13">Ø 1.10 (OD)</text>
+
+    <!-- Section label -->
+    <text x="240" y="-15" font-size="13" font-weight="bold">SECTION through utaguchi end (looking down bore axis)</text>
+  </g>
+
+  <!-- Notes -->
+  <g transform="translate(120, 380)" font-size="11" fill="#222">
+    <text y="0" font-weight="bold">Notes:</text>
+    <text y="18">1. Bevel angle 32° measured from bore axis. Hand-cut: bandsaw rough, chisel pare, mill-bastard file flat.</text>
+    <text y="36">2. Cut shallow first (0.250 in depth); measure fundamental; deepen in 0.020-in increments. Each 0.010 in ≈ 5–8 cents flatter.</text>
+    <text y="54">3. Outer-edge round-over softens chip on overblowing. Apply with fine flat file after final tuning.</text>
+    <text y="72">4. Inlay (buffalo horn / lignum vitae) optional for SHK-D4-P1. Mortise depth = inlay thickness; press-fit with hide glue.</text>
+  </g>
+
+  <!-- Title block -->
+  <g transform="translate(400, 500)">
+    <rect x="0" y="0" width="380" height="80" fill="none" stroke="#222" stroke-width="1.0"/>
+    <line x1="0" y1="20" x2="380" y2="20" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="40" x2="380" y2="40" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="60" x2="380" y2="60" stroke="#222" stroke-width="0.8"/>
+    <line x1="190" y1="20" x2="190" y2="80" stroke="#222" stroke-width="0.8"/>
+    <text x="6" y="14" font-size="11" font-weight="bold">Project: Shakuhachi (SHK-D4-P1)</text>
+    <text x="6" y="34" font-size="11">Drawing: Utaguchi Detail</text>
+    <text x="6" y="54" font-size="11">Section: top end</text>
+    <text x="196" y="34" font-size="11">Scale: 4:1</text>
+    <text x="196" y="54" font-size="11">Units: inches</text>
+    <text x="6" y="74" font-size="11">Material: cherry + opt. horn inlay</text>
+    <text x="196" y="74" font-size="11">Date: 2026-05-07  Rev: A</text>
+  </g>
+</svg>

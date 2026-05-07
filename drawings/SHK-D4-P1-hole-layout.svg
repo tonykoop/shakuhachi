@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 350"
+     font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>SHK-D4-P1 — Tone-Hole Layout (paper-wrap template, 1:1)</title>
+  <desc>Unwrapped cylindrical surface. 21.5 in length × π·1.10 = 3.456 in circumference. Print at 100% scale.</desc>
+
+  <rect x="0" y="0" width="1100" height="350" fill="#ffffff"/>
+
+  <!-- Layout: 21.50 in length at scale 1:2 visually (~40 px/in for fit on screen).
+       Print-time SVG must export at 1:1; this preview is sized for screen viewing
+       but the dimensions are the real-world dimensions. -->
+
+  <g transform="translate(80, 60)">
+    <!-- Unwrapped rectangle: width = 21.50 in (860 px), height = pi*1.10 = 3.456 in (138 px) -->
+    <rect x="0" y="0" width="860" height="138" fill="#fdfdfd" stroke="#222" stroke-width="1.2"/>
+
+    <!-- Front centerline at top half (y=34, half of 138/2) -->
+    <line x1="0" y1="34" x2="860" y2="34" stroke="#888" stroke-width="0.6" stroke-dasharray="6 3"/>
+    <text x="-5" y="38" text-anchor="end" font-size="11">FRONT</text>
+
+    <!-- Back centerline at bottom half (y=104) -->
+    <line x1="0" y1="104" x2="860" y2="104" stroke="#888" stroke-width="0.6" stroke-dasharray="6 3"/>
+    <text x="-5" y="108" text-anchor="end" font-size="11">BACK</text>
+
+    <!-- Foot edge marker -->
+    <line x1="0" y1="-15" x2="0" y2="153" stroke="#222" stroke-width="1.2"/>
+    <text x="0" y="-25" text-anchor="middle" font-size="11" font-weight="bold">FOOT (0.00 in)</text>
+
+    <!-- Utaguchi edge marker -->
+    <line x1="860" y1="-15" x2="860" y2="153" stroke="#222" stroke-width="1.2"/>
+    <text x="860" y="-25" text-anchor="middle" font-size="11" font-weight="bold">UTAGUCHI (21.50 in)</text>
+
+    <!-- Hole positions (front: y=34) -->
+    <!-- Hole 1 Tsu @ 19.40 -->
+    <circle cx="776" cy="34" r="5.5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <line x1="776" y1="29" x2="776" y2="39" stroke="#222" stroke-width="0.6"/>
+    <line x1="771" y1="34" x2="781" y2="34" stroke="#222" stroke-width="0.6"/>
+    <text x="776" y="55" text-anchor="middle" font-size="10">Tsu (F4) 19.40</text>
+
+    <!-- Hole 2 Re @ 17.29 -->
+    <circle cx="691.6" cy="34" r="5.5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <line x1="691.6" y1="29" x2="691.6" y2="39" stroke="#222" stroke-width="0.6"/>
+    <line x1="686.6" y1="34" x2="696.6" y2="34" stroke="#222" stroke-width="0.6"/>
+    <text x="691.6" y="55" text-anchor="middle" font-size="10">Re (G4) 17.29</text>
+
+    <!-- Hole 3 Chi @ 15.40 -->
+    <circle cx="616" cy="34" r="5.5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <line x1="616" y1="29" x2="616" y2="39" stroke="#222" stroke-width="0.6"/>
+    <line x1="611" y1="34" x2="621" y2="34" stroke="#222" stroke-width="0.6"/>
+    <text x="616" y="55" text-anchor="middle" font-size="10">Chi (A4) 15.40</text>
+
+    <!-- Hole 4 Ri @ 12.95 -->
+    <circle cx="518" cy="34" r="5.5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <line x1="518" y1="29" x2="518" y2="39" stroke="#222" stroke-width="0.6"/>
+    <line x1="513" y1="34" x2="523" y2="34" stroke="#222" stroke-width="0.6"/>
+    <text x="518" y="55" text-anchor="middle" font-size="10">Ri (C5) 12.95</text>
+
+    <!-- Thumb hole on back centerline @ 11.54 -->
+    <circle cx="461.6" cy="104" r="5.5" fill="none" stroke="#222" stroke-width="1.2"/>
+    <line x1="461.6" y1="99" x2="461.6" y2="109" stroke="#222" stroke-width="0.6"/>
+    <line x1="456.6" y1="104" x2="466.6" y2="104" stroke="#222" stroke-width="0.6"/>
+    <text x="461.6" y="125" text-anchor="middle" font-size="10">Thumb (Ro′ / D5) 11.54 (back)</text>
+
+    <!-- Length scale tick row at bottom -->
+    <line x1="0" y1="155" x2="860" y2="155" stroke="#222" stroke-width="0.6"/>
+    <g font-size="9">
+      <line x1="0"   y1="153" x2="0"   y2="160" stroke="#222"/>
+      <line x1="200" y1="153" x2="200" y2="160" stroke="#222"/>
+      <line x1="400" y1="153" x2="400" y2="160" stroke="#222"/>
+      <line x1="600" y1="153" x2="600" y2="160" stroke="#222"/>
+      <line x1="800" y1="153" x2="800" y2="160" stroke="#222"/>
+      <line x1="860" y1="153" x2="860" y2="160" stroke="#222"/>
+      <text x="0"   y="170" text-anchor="middle">0</text>
+      <text x="200" y="170" text-anchor="middle">5.00</text>
+      <text x="400" y="170" text-anchor="middle">10.00</text>
+      <text x="600" y="170" text-anchor="middle">15.00</text>
+      <text x="800" y="170" text-anchor="middle">20.00</text>
+      <text x="860" y="170" text-anchor="middle">21.50</text>
+    </g>
+
+    <!-- Print-scale verification box -->
+    <g transform="translate(0, 200)">
+      <rect x="0" y="0" width="40" height="14" fill="none" stroke="#222" stroke-width="0.6"/>
+      <text x="50" y="11" font-size="10">← This box should measure 1.00 in × 0.350 in when printed at 100%.</text>
+    </g>
+  </g>
+
+  <!-- Title block -->
+  <g transform="translate(700, 240)">
+    <rect x="0" y="0" width="380" height="80" fill="none" stroke="#222" stroke-width="1.0"/>
+    <line x1="0" y1="20" x2="380" y2="20" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="40" x2="380" y2="40" stroke="#222" stroke-width="0.8"/>
+    <line x1="0" y1="60" x2="380" y2="60" stroke="#222" stroke-width="0.8"/>
+    <line x1="190" y1="20" x2="190" y2="80" stroke="#222" stroke-width="0.8"/>
+    <text x="6" y="14" font-size="11" font-weight="bold">Project: Shakuhachi (SHK-D4-P1)</text>
+    <text x="6" y="34" font-size="11">Drawing: Tone-Hole Template</text>
+    <text x="6" y="54" font-size="11">Layout: unwrapped cylinder</text>
+    <text x="196" y="34" font-size="11">Scale: 1:1 (must print 100%)</text>
+    <text x="196" y="54" font-size="11">Units: inches</text>
+    <text x="6" y="74" font-size="11">Hole Ø 0.276 (drilled, undersize)</text>
+    <text x="196" y="74" font-size="11">Date: 2026-05-07  Rev: A</text>
+  </g>
+</svg>

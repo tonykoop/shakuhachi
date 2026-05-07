@@ -1,0 +1,194 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Shakuhachi SHK-D4-P1 — Print Packet</title>
+    <style>
+      body { font-family: Helvetica, Arial, sans-serif; max-width: 800px; margin: 2em auto; color: #1a1a1a; }
+      h1 { color: #a64f24; font-size: 26px; border-bottom: 1px solid #d8d2c2; padding-bottom: 6px; }
+      h2 { color: #a64f24; font-size: 18px; margin-top: 1.5em; }
+      h3 { font-size: 14px; }
+      table { border-collapse: collapse; width: 100%; font-size: 13px; margin: 1em 0; }
+      th, td { border: 1px solid #d8d2c2; padding: 5px 8px; text-align: left; }
+      th { background: #f6efe1; }
+      pre { background: #f8f5ec; border: 1px solid #d8d2c2; padding: 8px; font-family: Consolas, Menlo, monospace; font-size: 12px; }
+      code { font-family: Consolas, Menlo, monospace; background: #f8f5ec; padding: 1px 3px; }
+      hr { border: 0; border-top: 1px solid #d8d2c2; margin: 2em 0; }
+      ul { margin-left: 1.2em; }
+    </style>
+    </head><body><h1>Shakuhachi SHK-D4-P1 — Printable Shop Packet</h1>
+
+<p><strong>Project:</strong> Shakuhachi (SHK-D4-P1)</p>
+<p><strong>Date:</strong> 2026-05-07</p>
+<p><strong>Driver:</strong> Tony Koop</p>
+<p><strong>Skill:</strong> instrument-maker-v4</p>
+
+<hr/>
+
+<h2>Cover / summary</h2>
+
+<p>A single-instrument build packet for <strong>SHK-D4-P1</strong> — a 1.8-shaku D4 solid-cherry shakuhachi prototype. Open-pipe acoustics; bore drilled with the headstock-driven deep-bore drilling technique on the lathe. Hand-cut utaguchi. Five tone holes (4 front + 1 thumb), tuned to Kinko-ryū intervals.</p>
+
+<hr/>
+
+<h2>Quick start (shop reference)</h2>
+
+<table>
+<thead><tr><th>Step</th><th>Operation</th><th>Time</th><th>Page</th></tr></thead><tbody>
+<tr><td>1</td><td>Mill blanks (1×1×24 cherry)</td><td>30 min</td><td>§B</td></tr>
+<tr><td>2</td><td>Build tailstock vise (1-time)</td><td>90 min</td><td>§C</td></tr>
+<tr><td>3</td><td>Pine-scrap validation pass</td><td>45 min</td><td>§D</td></tr>
+<tr><td>4</td><td>Production deep-bore</td><td>90 min</td><td>§D</td></tr>
+<tr><td>5</td><td>Outside turn between centers</td><td>60 min</td><td>§E</td></tr>
+<tr><td>6</td><td>Tone-hole layout + drill 7 mm</td><td>45 min</td><td>§F</td></tr>
+<tr><td>7</td><td>Cut + file utaguchi</td><td>60 min</td><td>§G</td></tr>
+<tr><td>8</td><td>Bisque-style tuning</td><td>90 min</td><td>§H</td></tr>
+<tr><td>9</td><td>Walnut-oil + cure</td><td>5 d</td><td>§I</td></tr>
+<tr><td>10</td><td>Carnauba wax + final pass</td><td>30 min</td><td>§I</td></tr>
+</tbody></table>
+
+<hr/>
+
+<h2>File map</h2>
+
+<ul><li>`design.md` — governing model + design narrative</li>
+<li>`bom.csv` — 16-line bill of materials</li>
+<li>`sourcing.csv` — supplier list with verified-on column</li>
+<li>`cut-list.csv` — blank → finished part ops</li>
+<li>`validation.csv` — measurement plan + targets</li>
+<li>`assembly-manual.md` — 13-step shop manual (full detail)</li>
+<li>`risks.md` — red-team register; every risk has a test</li>
+<li>`drawings/` — 6 SVG drawings (overall + section + utaguchi + hole template + 2 fixtures)</li>
+<li>`cad/shakuhachi_master.scad` — OpenSCAD parametric master</li>
+<li>`wolfram-starter.wl` — Wolfram package for cents math + correction-refit</li>
+<li>`shakuhachi-design-table.xlsx` — 11-key parametric workbook</li>
+<li>`site/index.html` — public build log</li>
+
+</ul><hr/>
+
+<h2>§A — Design intent</h2>
+
+<p>Solid-billet hardwood adaptation of the shakuhachi. Western luthier shop. 1.8-shaku D4 first; sized siblings later. Document the open-pipe acoustic model honestly so the first measurement drives a corrections database update. Not a tradition-faithful reproduction; respectful of Kinko-ryū / Tozan-ryū lineage.</p>
+
+<hr/>
+
+<h2>§B — Bill of materials</h2>
+
+<p>(extract — full table in <code>bom.csv</code>)</p>
+
+<table>
+<thead><tr><th>ID</th><th>Item</th><th>Qty</th><th>Cost (USD)</th></tr></thead><tbody>
+<tr><td>SHK-BOM-001</td><td>Cherry blanks 1×1×24 in</td><td>3</td><td>28.00</td></tr>
+<tr><td>SHK-BOM-003</td><td>3/8 in pilot brad-point bit</td><td>1</td><td>16.00</td></tr>
+<tr><td>SHK-BOM-004</td><td>Step-up drill set 1/2-3/4 in</td><td>1</td><td>42.00</td></tr>
+<tr><td>SHK-BOM-005</td><td>20 mm reamer 24 in OAL</td><td>1</td><td>68.00</td></tr>
+<tr><td>SHK-BOM-006</td><td>Tailstock vise (build)</td><td>1</td><td>35.00</td></tr>
+<tr><td>SHK-BOM-007</td><td>Tone-hole drill jig (build)</td><td>1</td><td>15.00</td></tr>
+<tr><td>SHK-BOM-008</td><td>Diamond files round + flat</td><td>1</td><td>22.00</td></tr>
+<tr><td>SHK-BOM-010</td><td>Korg OT-120 chromatic tuner</td><td>1</td><td>89.00</td></tr>
+<tr><td>SHK-BOM-013</td><td>Walnut oil 8 oz</td><td>1</td><td>14.00</td></tr>
+<tr><td>SHK-BOM-014</td><td>Carnauba wax 4 oz</td><td>1</td><td>11.00</td></tr>
+</tbody></table>
+
+<p><strong>Total pictured: ~430 USD</strong> excluding optional inlay block.</p>
+
+<hr/>
+
+<h2>§C — Sourcing list</h2>
+
+<p>Primary: Bell Forest Products (cherry), Travers Tool (reamer), Lee Valley (bits + files), Sweetwater (tuner), Tried & True (walnut oil), McMaster-Carr (vise hardware).</p>
+
+<p><strong>Long-lead item:</strong> 20 mm reamer (~10 days). Order first.</p>
+
+<hr/>
+
+<h2>§D — Cut list (extract)</h2>
+
+<p>(full table in <code>cut-list.csv</code>)</p>
+
+<table>
+<thead><tr><th>Cut ID</th><th>Part</th><th>Operation</th></tr></thead><tbody>
+<tr><td>SHK-CUT-001</td><td>Cherry blank</td><td>Headstock-driven deep-bore + turn between centers</td></tr>
+<tr><td>SHK-CUT-002</td><td>Foot end face</td><td>Lathe parting + sandpaper face</td></tr>
+<tr><td>SHK-CUT-003</td><td>Utaguchi notch</td><td>Bandsaw + chisel + file (32° inner bevel)</td></tr>
+<tr><td>SHK-CUT-004…008</td><td>Tone holes</td><td>Drill press w/ V-cradle jig; 7 mm brad-point undersize</td></tr>
+</tbody></table>
+
+<hr/>
+
+<h2>§E — Drawing reference</h2>
+
+<table>
+<thead><tr><th>Drawing</th><th>Shows</th><th>Scale</th></tr></thead><tbody>
+<tr><td>SHK-D4-P1-overall.svg</td><td>Side elevation, full body, hole positions</td><td>1:2</td></tr>
+<tr><td>SHK-D4-P1-bore-section.svg</td><td>Section A-A through bore axis</td><td>1:2</td></tr>
+<tr><td>SHK-D4-P1-utaguchi.svg</td><td>Utaguchi notch geometry, 32° bevel</td><td>4:1</td></tr>
+<tr><td>SHK-D4-P1-hole-layout.svg</td><td>Unwrapped cylinder paper-wrap template</td><td>1:1</td></tr>
+<tr><td>SHK-D4-P1-blank.svg</td><td>Pre-bore square stock</td><td>1:4</td></tr>
+<tr><td>SHK-fixture-vise.svg</td><td>Tailstock vise welded fixture</td><td>1:2</td></tr>
+<tr><td>SHK-fixture-hole-jig.svg</td><td>Tone-hole drill-press V-cradle jig</td><td>1:2</td></tr>
+</tbody></table>
+
+<hr/>
+
+<h2>§F — Assembly manual</h2>
+
+<p>See <code>assembly-manual.md</code> for the full 13-step shop manual. The steps are:</p>
+
+<p>1. Read first (design.md, risks.md, instrument-maker#84)</p>
+<p>2. Mill blanks</p>
+<p>3. Center-mark + cross-mark</p>
+<p>4. Build tailstock vise (one-time)</p>
+<p>5. Scrap-stock validation pass (mandatory)</p>
+<p>6. Production deep-bore (the long one)</p>
+<p>7. Outside turn</p>
+<p>8. Tone-hole layout + drill undersize</p>
+<p>9. Cut utaguchi</p>
+<p>10. Bisque-style tuning (post-utaguchi)</p>
+<p>11. Per-hole tuning</p>
+<p>12. Octave check</p>
+<p>13. Finish + record</p>
+
+<hr/>
+
+<h2>§G — Validation / tuning sheet</h2>
+
+<p>(blanks for shop notes — see <code>validation.csv</code> for the full row set)</p>
+
+<table>
+<thead><tr><th>Stage</th><th>Target</th><th>Measured</th><th>Pass / Fail</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Bore wander @ 6 in</td><td>< 0.020 in</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Bore wander @ 12 in</td><td>< 0.040 in</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Bore wander @ 18 in</td><td>< 0.080 in</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Bore ID @ foot</td><td>0.787 ± 0.003</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Bore ID @ mid</td><td>0.787 ± 0.005</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Bore ID @ top</td><td>0.787 ± 0.005</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Wall @ hole-4 station</td><td>≥ 0.150 in (any quadrant)</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Ro fundamental</td><td>293.665 Hz ± 25 ¢ (pre-tune)</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Ro fundamental</td><td>293.665 Hz ± 10 ¢ (post-tune)</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Tsu (F4)</td><td>349.228 Hz ± 10 ¢</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Re (G4)</td><td>391.995 Hz ± 10 ¢</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Chi (A4)</td><td>440.000 Hz ± 10 ¢</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Ri (C5)</td><td>523.251 Hz ± 10 ¢</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Thumb (D5)</td><td>587.330 Hz ± 10 ¢</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>Octave Ro → Ro′</td><td>587.330 Hz ± 25 ¢</td><td>_____</td><td>□</td><td></td></tr>
+<tr><td>30-day drift</td><td>< 5 cents at 68 °F</td><td>_____</td><td>□</td><td></td></tr>
+</tbody></table>
+
+<p>Environment row (mandatory): Temp ____°F · RH ____% · tuner ____ · player ____</p>
+
+<hr/>
+
+<h2>§H — Supplier RFQ summary</h2>
+
+<p>See <code>supplier-rfq.md</code> for the full RFQ. Headlines: 3 quarter-sawn cherry blanks, 20 mm reamer at 24 in OAL, deep-bore drill set, validation hardware, oil + wax finish supplies, hardware for fixtures.</p>
+
+<hr/>
+
+<h2>§I — Visual BOM brief</h2>
+
+<p>A single-sheet (A3 landscape) plate with hero photo + tooling thumbnails + cost summary. See <code>visual-bom-brief.md</code> for the layout spec.</p>
+
+<hr/>
+
+<h2>§J — Appendix</h2>
+
+<ul><li>Cross-references: instrument-maker#84 (deep-bore drilling), tonykoop/flutes (NAF K2 — do not port), tonykoop/fujara (long open-pipe sister), tonykoop/transverse-flute (open-pipe packet template).</li>
+<li>Cultural framing: Western adaptation in respect for Kinko-ryū / Tozan-ryū lineage; not a tradition-faithful reproduction.</li>
+<li>Empirical loop: `record_measurement.py` updates per-family `δ_utaguchi` correction; sibling packets read forward.</li></ul></body></html>
