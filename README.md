@@ -5,6 +5,18 @@
 ![Hero — SHK-D4-P1 placeholder, replace after build](images/SHK-D4-P1-08-hero.jpg)
 *Placeholder hero plate: SHK-D4-P1, solid cherry, 21.5 in OAL, tuned to D4. Replace this file with the canonical 35° oblique product shot after the physical build is complete — see [photo-shotlist.md](photo-shotlist.md) shot 08.*
 
+## Release status
+
+This repo is **close-ready for human release review**, not release-complete. The packet set is in place: README rewrite, design docs, BOM/sourcing/cut list/validation, assembly manual, risks, Wolfram starter, drawings, OpenSCAD reference, print/deck artifacts, and the public build-log site all exist and pass the v4 packet validator.
+
+The remaining blockers are explicit:
+
+- **No measured prototype data yet.** `validation.csv` is a build-and-measure plan, not a filled results log.
+- **Hero media is still provisional.** The current hero is a placeholder plate until SHK-D4-P1 is physically built and photographed.
+- **SolidWorks handoff is honest but not yet checked in.** `cad/shakuhachi_master.scad` is the current geometry source in-repo; a future `sw-reference/` drop should only be added after the first prototype confirms the bore/utaguchi correction.
+
+**Next action:** build SHK-D4-P1, ingest the first measured Ro fundamental with `record_measurement.py`, then either export a confirmed drawing/render set from CAD or keep the repo explicitly framed as an OpenSCAD-first prototype packet.
+
 ## What this is
 
 Engineering documentation and parametric design for the **shakuhachi** (尺八) — a Japanese end-blown bamboo flute traditionally tuned in a minor pentatonic with five finger holes. This repository combines:
@@ -92,7 +104,7 @@ shakuhachi/
 
 ## Status
 
-- **Repo:** packet generated, ready for build review.
+- **Repo:** packet generated, close-ready for human release review.
 - **First prototype (SHK-D4-P1):** dimensions specified, validation plan written, risk register filed; **no physical build yet**.
 - **Family roll-out:** queued; reads forward from the empirical correction the first measurement produces.
 

@@ -124,7 +124,7 @@ Full register in `risks.md` — every risk has a verification test attached.
 # Empirical Loop
 
 ```bash
-python3 ~/.claude/skills/instrument-maker-v4/scripts/record_measurement.py \
+python3 <instrument-maker-v4-install>/scripts/record_measurement.py \
   --packet . \
   --note-id Ro \
   --measured-hz 293.6 \
@@ -132,7 +132,7 @@ python3 ~/.claude/skills/instrument-maker-v4/scripts/record_measurement.py \
   --environment "shop, 68F, 45% RH"
 ```
 
-Updates `validation.csv`, computes cents error, refits per-family `δ_utaguchi`. Sibling packets (Eb4 / E4 / F4 / G4 / A4 / B4) read the corrected value before their blanks are cut.
+Replace `<instrument-maker-v4-install>` with the local install path for the v4 skill/scripts bundle. Updates `validation.csv`, computes cents error, refits per-family `δ_utaguchi`. Sibling packets (Eb4 / E4 / F4 / G4 / A4 / B4) read the corrected value before their blanks are cut.
 
 # Open Assumptions
 

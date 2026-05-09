@@ -142,7 +142,7 @@ Each measurement gets a row in `validation.csv` — environment columns (temp, R
 After SHK-D4-P1 is measured, run:
 
 ```bash
-python3 ~/.claude/skills/instrument-maker-v4/scripts/record_measurement.py \
+python3 <instrument-maker-v4-install>/scripts/record_measurement.py \
   --packet . \
   --note-id Ro \
   --measured-hz 293.6 \
@@ -150,7 +150,7 @@ python3 ~/.claude/skills/instrument-maker-v4/scripts/record_measurement.py \
   --environment "shop, 68F, 45% RH"
 ```
 
-This updates `validation.csv`, computes cents error vs `f₀ = 293.665`, and refines the per-family `δ_utaguchi` correction so SHK-Eb4-001 / SHK-F4-001 / etc. predictions tighten before they're cut.
+Replace `<instrument-maker-v4-install>` with the local install path for the v4 skill/scripts bundle. This updates `validation.csv`, computes cents error vs `f₀ = 293.665`, and refines the per-family `δ_utaguchi` correction so SHK-Eb4-001 / SHK-F4-001 / etc. predictions tighten before they're cut.
 
 ## Cultural Framing
 

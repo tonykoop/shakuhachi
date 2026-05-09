@@ -16,8 +16,8 @@ See `bom.csv` (16 line items). Confirm SHK-BOM-001 through 008 + 010 + 013 are o
 
 ## Step 1 — Mill blanks
 
-1. Select three pieces of 6/4 quarter-sawn cherry, ~12 in long each. Inspect for runout, knots, internal checks.
-2. Mill to `1.000 x 1.000 x 24.000 in` (±0.005 in). Quarter-sawing matters for deep-bore drilling: tangential expansion is anisotropic, and quarter-sawn blanks wander less under heat from drill chips.
+1. Select three quarter-sawn cherry blanks at least `1.00 x 1.00 x 24.50 in`, or mill them from longer 6/4 stock. One blank is for SHK-D4-P1; two are for bore / utaguchi practice and recovery. Inspect for runout, knots, and internal checks.
+2. Mill each blank to `1.000 x 1.000 x 24.000 in` (±0.005 in). Quarter-sawing matters for deep-bore drilling: tangential expansion is anisotropic, and quarter-sawn blanks wander less under heat from drill chips.
 3. Mark each blank with face / edge / end orientation in pencil.
 
 ## Step 2 — Center-mark and cross-mark
@@ -39,7 +39,7 @@ If `SHK-fixture-vise` has already been built, skip to Step 4. Otherwise:
 ## Step 4 — Scrap-stock validation pass (mandatory)
 
 1. Mount the 3/8 in pilot bit (SHK-BOM-003) in the headstock Jacobs chuck. Indicate runout < 0.003 in.
-2. Clamp a pine or poplar scrap blank in the tailstock vise. Tighten side clamps; the blank must not rotate under finger pressure.
+2. Clamp a straight pine or poplar scrap blank at least 24 in long in the tailstock vise. Tighten side clamps; the blank must not rotate under finger pressure.
 3. Bring the blank up to the bit; verify the punch mark on the end face tracks the spindle axis.
 4. Pilot-bore 6 in into the scrap with the lathe at ~1500 rpm. Peck depth ≤ 1 in; retract every peck to clear chips.
 5. Withdraw blank; measure bore axis offset at 6 in. Target: ≤ 0.020 in offset. If exceeded, re-indicate the fixture and repeat.
@@ -118,7 +118,7 @@ If `SHK-fixture-vise` has already been built, skip to Step 4. Otherwise:
 2. Record final measurements (one row per fingering) in `validation.csv` and run:
 
    ```bash
-   python3 ~/.claude/skills/instrument-maker-v4/scripts/record_measurement.py \
+   python3 <instrument-maker-v4-install>/scripts/record_measurement.py \
      --packet . \
      --note-id Ro \
      --measured-hz <measured> \
@@ -126,4 +126,4 @@ If `SHK-fixture-vise` has already been built, skip to Step 4. Otherwise:
      --environment "shop, <T>F, <RH>% RH"
    ```
 
-3. The record-measurement script updates the per-family corrections database. Future packets in the shakuhachi family (SHK-Eb4-001 et al.) will read the updated `δ_utaguchi` correction automatically.
+3. Replace `<instrument-maker-v4-install>` with the local install path for the v4 skill/scripts bundle. The record-measurement script updates the per-family corrections database. Future packets in the shakuhachi family (SHK-Eb4-001 et al.) will read the updated `δ_utaguchi` correction automatically.
