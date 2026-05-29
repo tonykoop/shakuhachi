@@ -1,0 +1,13 @@
+artifact_path,artifact_type,authority,controlling_source,notes
+drawings/SHK-D4-P1-blank.svg,drawing,derived_preview,cad/shakuhachi_master.scad,D4 blank body outline SVG; derived from OpenSCAD source. Pending design-table/measurement review.
+drawings/SHK-D4-P1-bore-section.svg,drawing,derived_preview,cad/shakuhachi_master.scad,D4 bore cross-section SVG; derived from OpenSCAD source. First-order estimates only.
+drawings/SHK-D4-P1-hole-layout.svg,drawing,derived_preview,cad/shakuhachi_master.scad,D4 tone-hole layout SVG; derived from OpenSCAD source. Hole positions require prototype measurement.
+drawings/SHK-D4-P1-overall.svg,drawing,derived_preview,cad/shakuhachi_master.scad,D4 full-length overall drawing SVG; derived from OpenSCAD source.
+drawings/SHK-D4-P1-utaguchi.svg,drawing,derived_preview,cad/shakuhachi_master.scad,Utaguchi (embouchure) geometry SVG; derived from OpenSCAD source. Empirical voicing required.
+drawings/SHK-fixture-hole-jig.svg,drawing,derived_preview,cad/shakuhachi_master.scad,Hole-drilling jig SVG; derived from OpenSCAD source.
+drawings/SHK-fixture-vise.svg,drawing,derived_preview,cad/shakuhachi_master.scad,Vise fixture SVG; derived from OpenSCAD source.
+cad/shakuhachi_master.scad,cad_source,pending_measurement,shakuhachi-design-table.xlsx,OpenSCAD parametric source; L2 CAD authority pending measurement confirmation. Dimensions are first-order estimates — not fabrication authority until prototype bore/utaguchi measurement loop closes.
+images/SHK-D4-P1-08-hero.jpg,image,reference_only,,Provisional hero placeholder photo; not dimensional. Replace after physical build with canonical 35° oblique product shot — see photo-shotlist.md shot 08.
+wolfram-starter.wl,wolfram_source,pending_measurement,shakuhachi-design-table.xlsx,Root-mode loader; source-only at L2.
+shakuhachi-starter.wl,wolfram_source,pending_measurement,shakuhachi-design-table.xlsx,Instrument-specific Wolfram starter; source-only at L2 — runtime execution not yet recorded.
+family-spec.csv,family_spec,pending_measurement,shakuhachi-design-table.xlsx,L2 family spec scaffold; dimension_provenance is measurement_required.

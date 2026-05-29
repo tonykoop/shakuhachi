@@ -1,0 +1,2 @@
+member_id,target_key,target_hz,acoustic_law,end_condition,bore_id_mm,tonehole_count,material_system,dimension_provenance,source_artifact,notes
+SHK-D4-P1,D4,293.66,open_open,both_ends_open,24.0,5+thumb,bamboo/bamboo-composite/hardwood,measurement_required,shakuhachi-design-table.xlsx,L2 scaffold; bore ID and tonehole positions are first-order model predictions from OpenSCAD source. Dimensions require prototype bore/utaguchi measurement loop before fabrication authority.
