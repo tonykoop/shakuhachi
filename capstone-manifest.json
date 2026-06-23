@@ -46,12 +46,37 @@
   "first_prototype": {
     "id": "SHK-D4-P1",
     "fundamental_hz": 293.665,
-    "physical_length_in": 21.50,
+    "physical_length_in": 21.5,
     "bore_id_in": 0.787,
-    "od_in": 1.10,
+    "od_in": 1.1,
     "material": "cherry, quarter-sawn",
     "bore_strategy": "headstock-driven deep-bore drilling",
     "issue_reference": "tonykoop/instrument-maker#84"
   },
-  "validator_status": "see report; ran with --fix where possible"
+  "validator_status": "see report; ran with --fix where possible",
+  "engineering": {
+    "wolfram": [
+      {
+        "source_file": "woodwind/shakuhachi/shakuhachi-starter.wl",
+        "cloud_path": "Musical_Instruments/woodwinds/shakuhachi/shakuhachi-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/woodwinds/shakuhachi/shakuhachi-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
+      },
+      {
+        "source_file": "woodwind/shakuhachi/wolfram-starter.wl",
+        "cloud_path": "Musical_Instruments/woodwinds/shakuhachi/wolfram-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/woodwinds/shakuhachi/wolfram-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
+      },
+      {
+        "source_file": "woodwind/shakuhachi/wolfram/shakuhachi-wolfram-model.wl",
+        "cloud_path": "Musical_Instruments/woodwinds/shakuhachi/shakuhachi-wolfram-model.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/woodwinds/shakuhachi/shakuhachi-wolfram-model.wl",
+        "permission": "Public-Execute",
+        "kind": "geometry-model"
+      }
+    ]
+  }
 }
