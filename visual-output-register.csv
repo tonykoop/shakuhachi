@@ -11,3 +11,4 @@ images/SHK-D4-P1-08-hero.jpg,image,reference_only,,Provisional hero placeholder 
 wolfram-starter.wl,wolfram_source,pending_measurement,shakuhachi-design-table.xlsx,Root-mode loader; source-only at L2.
 shakuhachi-starter.wl,wolfram_source,pending_measurement,shakuhachi-design-table.xlsx,Instrument-specific Wolfram starter; source-only at L2 — runtime execution not yet recorded.
 family-spec.csv,family_spec,pending_measurement,shakuhachi-design-table.xlsx,L2 family spec scaffold; dimension_provenance is measurement_required.
+wolfram/shakuhachi-wolfram-model.wl,wolfram_source,derived_preview,shakuhachi-design-table.xlsx,"V5 refresh: interactive open-open-pipe acoustic model (deployed to explorer.html embed); source-only, not executed — L2 evidence."

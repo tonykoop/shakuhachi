@@ -7,7 +7,7 @@
 
 ## Release status
 
-**Status: L2 V5 build-packet candidate.** The packet set is in place: README rewrite, design docs, BOM/sourcing/cut list/validation, assembly manual, risks, Wolfram starter, drawings, OpenSCAD reference, print/deck artifacts, and the public build-log site all exist. V5 artifacts (`visual-output-register.csv`, `cad/mcp-session-log.md`, `family-spec.csv`) added 2026-05-29.
+**Status:** L2 V5 build-packet candidate. The packet set is in place: README rewrite, design docs, BOM/sourcing/cut list/validation, assembly manual, risks, Wolfram starter, drawings, OpenSCAD reference, print/deck artifacts, and the public build-log site all exist. V5 artifacts (`visual-output-register.csv`, `cad/mcp-session-log.md`, `family-spec.csv`) added 2026-05-29.
 
 The remaining blockers are explicit:
 
@@ -99,6 +99,9 @@ shakuhachi/
 ├── drawings/                      6 SVGs (overall, bore section, utaguchi,
 │                                  hole template, vise fixture, hole jig)
 ├── images/                        photos (populated during build)
+├── evolution/                     evolution-pipeline Stage 0 intake (master
+│                                  manifest, design-intent, revisions; Gate A
+│                                  not yet run)
 └── site/index.html                public build-log page
 ```
 

@@ -1,0 +1,34 @@
+{
+  "product": "shakuhachi",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "pre-commit 2026-07-01",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/shakuhachi_master.scad",
+      "format": "openscad-source",
+      "sha256": "5e1eab587df07bde368e7b54522ce0b5beb3cecc83d5baec8c92fb0c24edd8a5",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Existing real master (kept, not rewritten per V5 woodwind addendum). Utaguchi/blowing-edge bevel geometry stays out of scope — hand-refined, tuning-sensitive."
+    },
+    {
+      "path": "shakuhachi-design-table.xlsx",
+      "format": "design-table",
+      "sha256": "e20c7322fb02a1b126804d6d7b2a8281e23369728cbd3b6d9807a8e49a280e54",
+      "authority": "fabrication",
+      "lossy": false,
+      "notes": "Current dimensional authority: 11-key parametric family, D4 1.8-shaku first prototype."
+    },
+    {
+      "path": "wolfram/shakuhachi-wolfram-model.wl",
+      "format": "wolfram-source",
+      "sha256": "dfff62236ecca29c5bcd3b4f2eaa9bb577d186552d3bb71518a476a7ca6dbb32",
+      "authority": "derived_preview",
+      "lossy": false,
+      "notes": "Interactive open-open-pipe acoustic model, deployed to explorer.html embed; source-only, not executed."
+    }
+  ],
+  "notes": "OpenSCAD source is current master; no STEP/physical prototype exists yet (SHK-D4-P1 not yet built). Gate A (Alpha workspace compile) not yet run."
+}
